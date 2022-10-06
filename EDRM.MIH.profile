@@ -22,13 +22,14 @@
 	metadata_profile = $utilities.getMetadataProfileStore.getMetadataProfile(metadata_profile_name)
 	
 	edrm_mih_hash = ""
-	
+	edrm_spec_first_value = ""
 	metadata_profile.getMetadata.each do |field|
 		field_value = field.evaluate(item)
 		if field_value == ""
 			edrm_mih_hash = "null"
 		else
-			edrm_mih_hash = Digest::MD5.hexdigest field_value
+			edrm_spec_first_value = field_value.match /^(.*?\>)/
+			edrm_mih_hash = Digest::MD5.hexdigest edrm_spec_first_value.to_s
 			edrm_mih_hash = edrm_mih_hash.upcase
 		end 
 	end
