@@ -1,9 +1,6 @@
 # EDRM.MIH.Nuix
 
-
-Nuix Custom Metadata Profiles to create EDRM MIH values
-
-Import both metadata profiles into Nuix Workstation to test the EDRM MIH value.
+The EDRM MIH is an email message ID that can be used for convienence for cross vendor deduplication of emails.  For additional details, [EDRM.Net Emerging Projects - DedupeID Project](https://edrm.net/active-projects/#1598305251397-89bd62e4-e5ad)
 
 ## Metadata Profiles
 1. EDRM.MIH.profile: A Metadata profile that will dynamically calculate the EDRM MIH value using a scripted metadata profile.  NOTE: This is not super performant but can be used for testing.  If you are looking to use Item Sets or export this values, it is recommended that you run the [EDRM.MIH.Nuix.update.custom.metadata.rb](https://github.com/stephenlstewart/EDRM.MIH.Nuix/blob/f143d66590936edbf2e1fc26e58ded908151d7ce/EDRM.MIH.Nuix.update.custom.metadata.rb) script to memorialize EDRM MIH as a piece of custom metadata.
